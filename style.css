@@ -1,0 +1,60 @@
+body{
+background-color: rgb(27, 164, 36);
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.periodic-table{
+    display: grid;
+    grid-template-columns: repeat(18,100px);
+    grid-template-rows: repeat(9, 100px);
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1200px;
+    justify-content: center;
+
+}
+
+.periodic-element{
+    padding: 4px;
+    position:relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.periodic-element .periodic-element-inner{
+    background-color: burlywood;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.periodic-element-title{
+    font: 700 26.1538px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0.3em;
+    transition: 0.8s ease 600ms;
+}
+
+.periodic-element .desc{
+    font: 500 12px;
+    margin-top: -0.2em;
+}
+
+.periodic-element:hover{
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.left-section{
+    right: 90px;
+}
+
+.bottom-section{
+    top: 90px;
+}
